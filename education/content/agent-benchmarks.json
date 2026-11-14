@@ -1,0 +1,60 @@
+{
+  "suites": [
+    {
+      "id": "neutral-number-contract",
+      "title": "Neutral JSON number contract",
+      "instructions": "Return a JSON object with value equal to the supplied number.",
+      "outputSchema": {
+        "type": "object",
+        "required": [
+          "value"
+        ],
+        "properties": {
+          "value": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "cases": [
+        {
+          "id": "one",
+          "split": "development",
+          "kind": "normal",
+          "input": {
+            "number": 1
+          },
+          "expected": {
+            "value": 1
+          },
+          "checks": [
+            {
+              "type": "exact",
+              "path": "value",
+              "expected": 1
+            }
+          ]
+        },
+        {
+          "id": "two",
+          "split": "holdout",
+          "kind": "normal",
+          "input": {
+            "number": 2
+          },
+          "expected": {
+            "value": 2
+          },
+          "checks": [
+            {
+              "type": "exact",
+              "path": "value",
+              "expected": 2
+            }
+          ]
+        }
+      ],
+      "humanRubric": []
+    }
+  ]
+}

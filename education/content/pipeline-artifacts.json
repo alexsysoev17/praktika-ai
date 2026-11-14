@@ -1,0 +1,200 @@
+{
+  "version": "1",
+  "title": "Procedural geometry fixtures",
+  "note": "Synthetic shapes for file-validation tests. No model inference was used.",
+  "contracts": {
+    "mesh_3d": {
+      "maxTriangles": 25000,
+      "allowedBaseColors": [
+        "#C4B5FD",
+        "#A3E635",
+        "#F1EDFF"
+      ],
+      "roughnessMin": 0.6,
+      "metallicMax": 0.1,
+      "maxExtent": 3
+    },
+    "raster_3d": {
+      "width": 512,
+      "height": 512,
+      "maxBytes": 1000000,
+      "requireAlpha": true
+    }
+  },
+  "artifacts": [
+    {
+      "id": "mesh-cloud",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/cloud.glb",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Облако",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "0c3c78b34b95c965607c36d5d337a7a14860b8d8bd9a22479fcc36867c259859"
+      }
+    },
+    {
+      "id": "mesh-folder",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/folder.glb",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Папка",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "683f0e31cd375b0d942ab1fc0c960dbd220aa59c4507f97e5552d6df736a2858"
+      }
+    },
+    {
+      "id": "mesh-lock",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/lock.glb",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Замок",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "659cdef8f6fd937871a2ce00872c4ef0b7e6e799efb5d0807d285c6a00e8f005"
+      }
+    },
+    {
+      "id": "mesh-chart",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/chart.glb",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Рост",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "c8fd5c10ecb0a8ae70ef10ba9ebcbafbd42053e2ae092fefc32b74a3a923d0d9"
+      }
+    },
+    {
+      "id": "mesh-stack",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/stack.glb",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Слои",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "9865a8254aa8c4149bbe73a9bf720503c140835d4815d93f1e5e67b360a3d6dd"
+      }
+    },
+    {
+      "id": "mesh-target",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/target.glb",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Цель",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "998daeac71d4568f0d5e9f85b57361456eda7284fbc015503ba617db1fe3313e"
+      }
+    },
+    {
+      "id": "mesh-bad-palette",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/bad-palette.glb",
+      "role": "negative",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Ошибка: чужая палитра",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "9071a8ecdb4423cd4bf3bfef3d73cbf55e09f7a57ddebd6dbb591ad8c9c043ee"
+      }
+    },
+    {
+      "id": "mesh-bad-roughness",
+      "type": "mesh_3d",
+      "path": "assets/pipeline/bad-roughness.glb",
+      "role": "negative",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Ошибка: глянцевый материал",
+        "provenance": "procedural_authored_not_ai",
+        "sha256": "be361f8e3192005cdf83132d15fc792a55865a6fb013eec4f7cee7e2018a04d2"
+      }
+    },
+    {
+      "id": "png-cloud",
+      "type": "raster_3d",
+      "path": "assets/pipeline/cloud.png",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Облако · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-cloud",
+        "sha256": "286b2ab65da7e94ad71f3738835764e5e804bac93b05c6a150fa43db70a95b4e"
+      }
+    },
+    {
+      "id": "png-folder",
+      "type": "raster_3d",
+      "path": "assets/pipeline/folder.png",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Папка · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-folder",
+        "sha256": "db219e9fb0159883c488b1c512dead2fb54f6b993d5a82fc2948483a0f0eddd3"
+      }
+    },
+    {
+      "id": "png-lock",
+      "type": "raster_3d",
+      "path": "assets/pipeline/lock.png",
+      "role": "pilot",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Замок · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-lock",
+        "sha256": "27e46f6c99d30aea156b733da019b459d016f60b8b276e5a4ff040b31fda5a91"
+      }
+    },
+    {
+      "id": "png-chart",
+      "type": "raster_3d",
+      "path": "assets/pipeline/chart.png",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Рост · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-chart",
+        "sha256": "f12e972939277e2bdcd3c574245d2ac39819310ffa9f481260132178cca1d0ae"
+      }
+    },
+    {
+      "id": "png-stack",
+      "type": "raster_3d",
+      "path": "assets/pipeline/stack.png",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Слои · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-stack",
+        "sha256": "616d440615d2ad0e3e134c2017a50e66cdbdf4c2f049bbbd2e001ba66c32a0c5"
+      }
+    },
+    {
+      "id": "png-target",
+      "type": "raster_3d",
+      "path": "assets/pipeline/target.png",
+      "role": "batch",
+      "seriesId": "clay-orbit-v1",
+      "metadata": {
+        "title": "Цель · PNG",
+        "provenance": "webgl_render_of_procedural_authored_mesh_not_ai",
+        "sourceMesh": "mesh-target",
+        "sha256": "33a780314ad9df157243343702d27ea9001f39aa9030c9e52c1527303ea98c8f"
+      }
+    }
+  ]
+}
